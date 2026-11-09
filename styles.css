@@ -1,0 +1,296 @@
+:root {
+  color-scheme: dark;
+  --emphasis: #200e2f;
+  --ink: #f6f1ea;
+  --muted: #cbbfd8;
+  --link: #f0e2ff;
+  --paper: #0b0710;
+  --card: var(--emphasis);
+  --line: #4a3268;
+  --event: #16140f;
+  --event-line: #3d382e;
+  --focus: #f0d78c;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Candara, sans-serif;
+  font-size: 1.0625rem;
+  line-height: 1.5;
+  color: var(--ink);
+  background: var(--paper);
+}
+
+.wrap {
+  width: min(60rem, calc(100% - 2rem));
+  margin-inline: auto;
+}
+
+.site-header {
+  padding: 1.5rem 0 1.25rem;
+  background: var(--emphasis);
+  border-bottom: 1px solid var(--line);
+}
+
+.eyebrow {
+  margin: 0;
+  color: var(--link);
+  font-size: 0.95rem;
+  font-weight: 650;
+  letter-spacing: 0.02em;
+}
+
+h1,
+h2,
+h3 {
+  font-family: Palatino, "Palatino Linotype", Georgia, serif;
+  font-weight: 650;
+  line-height: 1.2;
+}
+
+h1 {
+  margin: 0.15rem 0 0.5rem;
+  font-size: 2rem;
+}
+
+h2 {
+  margin: 0 0 1rem;
+  font-size: 1.5rem;
+}
+
+h3 {
+  margin: 0 0 0.75rem;
+  font-size: 1.25rem;
+}
+
+a {
+  color: var(--link);
+  text-underline-offset: 0.15em;
+}
+
+a:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 2px;
+}
+
+.dates {
+  margin: 0;
+  color: var(--muted);
+}
+
+#app {
+  padding: 1.25rem 0 2.5rem;
+}
+
+.day + .day,
+.storytellers {
+  margin-top: 2rem;
+}
+
+.time-block + .time-block {
+  margin-top: 1rem;
+}
+
+.time {
+  margin: 0 0 0.4rem;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+.time-items {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.75rem;
+}
+
+.slot {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 0.6rem;
+}
+
+.slot-event {
+  background: var(--event);
+  border-color: var(--event-line);
+  color: #e8e2d6;
+}
+
+.room {
+  margin: 0;
+  padding: 0.75rem 1rem 0;
+  color: var(--muted);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.room + .script-link,
+.slot-event .room + .event-name {
+  padding-top: 0.2rem;
+}
+
+.script-link {
+  display: block;
+  min-height: 2.75rem;
+  padding: 0.85rem 1rem 0.15rem;
+  font-size: 1.125rem;
+  font-weight: 700;
+  text-decoration-thickness: 2px;
+}
+
+.tellers,
+.grimions {
+  margin: 0;
+  padding: 0 1rem;
+  line-height: 1.2;
+}
+
+.tellers .person-link,
+.grimions .person-link {
+  min-height: 0;
+  padding: 0.1rem 0;
+}
+
+.st-prefix {
+  font-weight: 650;
+}
+
+.tellers-last,
+.grimions {
+  padding-bottom: 0.7rem;
+}
+
+.person-link {
+  display: inline-block;
+  min-height: 2.75rem;
+  padding: 0.45rem 0;
+  font-weight: 650;
+}
+
+.event-name {
+  margin: 0;
+  padding: 0.95rem 1rem;
+  min-height: 2.75rem;
+  font-weight: 700;
+}
+
+.back-link {
+  display: inline-block;
+  min-height: 2.75rem;
+  margin: 0 0 0.75rem;
+  padding: 0.55rem 0;
+  font-weight: 650;
+}
+
+.facts {
+  margin: 0;
+}
+
+.facts div {
+  margin: 0 0 0.85rem;
+}
+
+.facts dt {
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.facts dd {
+  margin: 0.1rem 0 0;
+}
+
+.facts a {
+  display: inline-block;
+  min-height: 2.75rem;
+  padding: 0.45rem 0;
+}
+
+.external-icon {
+  width: 0.85em;
+  height: 0.85em;
+  margin-left: 0.3em;
+  vertical-align: -0.1em;
+}
+
+.bio {
+  margin: 0 0 1.5rem;
+  max-width: 40rem;
+  white-space: pre-line;
+}
+
+.game-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.game-list a {
+  display: block;
+  min-height: 2.75rem;
+  padding: 0.65rem 0;
+  font-weight: 650;
+}
+
+.person-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr));
+  gap: 0.75rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.person-list li {
+  display: flex;
+}
+
+.person-card {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.35rem;
+  min-height: 5.5rem;
+  padding: 0.85rem 1rem;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 0.6rem;
+  text-decoration: none;
+}
+
+.person-name {
+  font-size: 1.125rem;
+  font-weight: 700;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.15em;
+}
+
+.person-location {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+@media (min-width: 48rem) {
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  .time-items.cols-2 {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .time-items.cols-3 {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
